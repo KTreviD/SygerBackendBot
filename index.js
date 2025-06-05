@@ -6,18 +6,15 @@ import 'dotenv/config';
 import { dictionary } from './dictionary.js';
 
 const app = express();
-const port = 8000;
-console.log({dictionary})
-// Configurar Middlewares
+const port = process.env.PORT || 3000; 
+
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configurar OpenAI
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Endpoint para procesar mensajes
 app.post('/generate', async (req, res) => {
   const { prompt } = req.body;
     console.log({prompt})
