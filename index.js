@@ -48,9 +48,7 @@ app.post('/generate', async (req, res) => {
     const response = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [
-        { role: 'system', content: `
-
-` },
+        { role: 'system', content:content},
         { role: 'user', content: prompt },
       ],
       max_tokens: 300,
