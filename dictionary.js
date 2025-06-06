@@ -1,5 +1,5 @@
 export const appActions = {
-    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui, diles que contacten a Cynthia de soporte",
+    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, diles que contacten a Cynthia de soporte",
     accion: 'En la pantalla principal selecciona la opción ',
     'Cambiar contraseña': 'Para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario',
     Noticias: {
