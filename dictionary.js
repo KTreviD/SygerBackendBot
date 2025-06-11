@@ -1,7 +1,8 @@
 export const appActions = {
-    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, diles que contacten a Cynthia de soporte",
+    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, recomiendales contactar a SOPORTE TECNICO, para que te proporcionen asistencia adicional, en el siguiente WhatsApp https://wa.me/5218134022503",
     accion: 'En la pantalla principal selecciona la opción ',
-    'Cambiar contraseña': 'Para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario',
+    'Cambiar contraseña': 'Si tienes la sesión iniciada, para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario, si no tienes la sesión iniciada da click ¿Olvido su contraseña?, y pon tu usuario, si no recuerdas tu usuario, contacta con soporte en este link https://wa.me/5218134022503',
+    'No me llegan notificaciones': 'En la pantalla principal selecciona el menú principal, que se encuentra en las 3 líneas horizontales, selecciona Permisos, Revisa que todos los permisos estén habilitados para el correcto funcionamiento de la aplicación y de tus notificaciones.',
     Noticias: {
         accion: 'Selecciona la opción',
         Avisos: {
@@ -12,7 +13,8 @@ export const appActions = {
             'Nuevo mensaje': `Selecciona si al administrador o al guardia, llena la informacion que te pide y da en 'Enviar Mensaje'`
         },
         Notificaciones: {
-            'Ver noticia': "Selecciona la noticia que te interese para ver mas información"
+            'Ver noticia': "Selecciona la noticia que te interese para ver mas información",
+            
         },
         Recomendados: {
             'Ver contactos recomendados': "Selecciona al recomendado que te interese para ver su información"
@@ -54,7 +56,7 @@ export const appActions = {
     },
     'Mi cuenta': {
         accion: 'Selecciona la opción ',
-        'Agregar pago': `Llena los datos que se piden y da click en el boton de siguiente.`,
+        'Agregar pago': `Llena Fecha de pago, folio, monto, forma de pago, observaciones, Dar clic en continuar y anexar su comprobante de pago, usando su cámara o desde su galería, Dar cllic en Guardar.`,
         'Mis pagos': `Podras ver la lista de historial de pagos realizados, si quieres ver mas detalles selecciona el comprobante de pago que te interese.`,
         'Mi estado de cuenta': `Podras seleccionar el periodo del cual te interese ver el estado de cuenta.`,
         'Datos bancarios': 'Podras ver la información de tus datos bancarios dados de alta'
