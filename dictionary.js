@@ -1,8 +1,11 @@
 export const appActions = {
-    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, recomiendales contactar a SOPORTE TECNICO, para que te proporcionen asistencia adicional, en el siguiente WhatsApp https://wa.me/5218134022503",
-    accion: 'En la pantalla principal selecciona la opción ',
+    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, recomiendales contactar a SOPORTE TECNICO, para que te proporcionen asistencia adicional, en el siguiente WhatsApp https://wa.me/5218134022503 o ve con la administración de tu fraccionamiento.",
+    'Abrir del porton desde la app': "En la pantalla selecciona la opcion visitas, ",
     'Cambiar contraseña': 'Si tienes la sesión iniciada, para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario, si no tienes la sesión iniciada da click ¿Olvido su contraseña?, y pon tu usuario, si no recuerdas tu usuario, contacta con soporte en este link https://wa.me/5218134022503',
     'No me llegan notificaciones': 'En la pantalla principal selecciona el menú principal, que se encuentra en las 3 líneas horizontales, selecciona Permisos, Revisa que todos los permisos estén habilitados para el correcto funcionamiento de la aplicación y de tus notificaciones.',
+    'Activar o desactivar visitas': `En la pantalla principal, para descactivar las visitas deshabilita la opción 'Permitir Visitas', se activan en la misma opción`,
+    'No funcionan mis QRs': 'Existen varios factores que pueden afectar a la lectura de un QR, hay que verificar los siguientes puntos: 1. Que la pantalla de su dispositivo no este dañada o quebrada. Ajustar al maximo el nivel de brillo de la pantalla. Bloquear la luz solar intensa que se pueda reflejarse en la pantalla del dispositivo En caso que el poblema persista puede Descactivar sus visitas y volver a activarlas para reactivar sus QRs registrados de manera exitosa. En caso de persisitir su problema contactar a Soporte Tecnico',
+    accion: 'En la pantalla principal selecciona la opción ',
     Noticias: {
         accion: 'Selecciona la opción',
         Avisos: {
@@ -39,11 +42,11 @@ export const appActions = {
     Encuestas: {
         accion: 'Selecciona la opción',
         'Ver encuestas': `Selecciona la encuesta que quieras ver mas detalles.`,
-        'Contestar encuestas': `Selecciona la encuesta que quieres responder, llena sus datos y selecciona el boton de 'Finalizada', saldra un aviso que te advierte que una vez respondida la encuesta no podras cambiar la respuesta, selecciona 'Aceptar', para guardar las respuestas en la encuesta.`,
+        'Contestar encuestas': `Selecciona la encuesta que quieres responder, llena sus datos y selecciona el boton de 'Enviar respuesta', saldra un aviso que te advierte que una vez respondida la encuesta no podras cambiar la respuesta, selecciona 'Aceptar', para guardar las respuestas en la encuesta.`,
     }, 
     Reservaciones: {
         accion: 'Selecciona la opción',
-        'Agregar reservación': `Selecciona el espacios disponible que desees reservar, selecciona la fecha y la hora, despues da click en el boton de reservar, se abrira la pantalla para que puedas pagar para reservar el espacio, llena los campos requeridos y da click en el boton de reservar, para despues agregar una imagen del comprobante de pago y dar click en agregar pago.`,
+        'Agregar reservación': `Selecciona el espacios disponible que desees reservar, selecciona la fecha y la hora, despues da click en el botón de 'Reservar', se abrira la pantalla para que puedas pagar para reservar el espacio, llena los campos requeridos y da click en el boton de reservar, para despues agregar una imagen del comprobante de pago y dar click en agregar pago, puede ser posible que esa fecha ya se encuentre reservada por otro residente, puede verificarlo en el Calendario de reservaciones.`,
         'Ver reservación': `Da click al boton 'Mis reservaciones', ahi podras ver tus reservaciones registradas, las verdes es que ya las valido la administracion, las rojas es que siguen pendientes.`,
         'Ver reglamento': `Selecciona el espacio en el que te interese ver su reglamento, y al entrar dale click al boton 'Reglamento'.`,
     },
@@ -56,7 +59,7 @@ export const appActions = {
     },
     'Mi cuenta': {
         accion: 'Selecciona la opción ',
-        'Agregar pago': `Llena Fecha de pago, folio, monto, forma de pago, observaciones, Dar clic en continuar y anexar su comprobante de pago, usando su cámara o desde su galería, Dar cllic en Guardar.`,
+        'Agregar pago': `Llena Fecha de pago, folio, monto, forma de pago, observaciones, le va a mostrar una lista de conceptos de pago y tiene que seleccionar el que desea pagar, dar clic en continuar y anexar su comprobante de pago, usando su cámara o desde su galería, Dar cllic en Guardar.`,
         'Mis pagos': `Podras ver la lista de historial de pagos realizados, si quieres ver mas detalles selecciona el comprobante de pago que te interese.`,
         'Mi estado de cuenta': `Podras seleccionar el periodo del cual te interese ver el estado de cuenta.`,
         'Datos bancarios': 'Podras ver la información de tus datos bancarios dados de alta'
