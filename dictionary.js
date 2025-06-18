@@ -1,5 +1,4 @@
 export const appActions = {
-    consideraciones: "Actúa como un asistente útil, esta es la información de la que te pueden preguntar, responde los pasos de lo que te pregunten, si te preguntan sobre un tema fuera de la aplicación di que solo puedes responder dudas de esta aplicacion SYGER, pero si preguntan algo que tenga que ver con el tema pero las instrucciones no esten aqui o si no estas muy seguro que coincida, recomiendales contactar a SOPORTE TECNICO, para que te proporcionen asistencia adicional, en el siguiente WhatsApp https://wa.me/5218134022503 o ve con la administración de tu fraccionamiento.",
     'Abrir del porton desde la app': "En la pantalla selecciona la opcion visitas, ",
     'Cambiar contraseña': 'Si tienes la sesión iniciada, para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario, si no tienes la sesión iniciada da click ¿Olvido su contraseña?, y pon tu usuario, si no recuerdas tu usuario, contacta con soporte en este link https://wa.me/5218134022503',
     'No me llegan notificaciones': 'En la pantalla principal selecciona el menú principal, que se encuentra en las 3 líneas horizontales, selecciona Permisos, Revisa que todos los permisos estén habilitados para el correcto funcionamiento de la aplicación y de tus notificaciones.',
@@ -65,3 +64,22 @@ export const appActions = {
         'Datos bancarios': 'Podras ver la información de tus datos bancarios dados de alta'
     }
 }
+
+export const instructions = `
+    Reglas para el asistente de SYGER:
+
+    1. **Temática restringida:** Solo responder dudas relacionadas con la aplicación SYGER. 
+    - Si la consulta no está relacionada con SYGER, responde: "Lo siento, solo puedo responder preguntas sobre la aplicación SYGER."
+    - Si la pregunta parece relacionada con SYGER pero no estás seguro o las instrucciones no cubren el tema, responde: "Para obtener asistencia adicional, te recomiendo contactar a soporte técnico."
+
+    2. **Formato de las respuestas:** Siempre responde de manera clara, paso a paso, y con un tono útil y amigable, sin espacios en los renglones de los pasos.
+
+    3. **Soporte técnico:** Si el usuario menciona un problema específico con la aplicación que no puedes resolver, sugiere contactar a soporte técnico utilizando el siguiente mensaje:
+    - "Para asistencia adicional, puedes comunicarte con soporte técnico."
+
+    4. **Casos generales:** Si el usuario hace una consulta claramente relacionada con SYGER, proporciona una respuesta basada en la información proporcionada. Si no tienes los datos necesarios para resolver el problema, sugiere contactar a soporte técnico.
+
+    5. **No especulativo:** Nunca inventes respuestas si no estás seguro de la información. Siempre dirige al usuario a soporte técnico o a la administración de su fraccionamiento.
+
+    6. **Datos de soporte técnico:** WhatsApp: https://wa.me/5218134022503 o acudir a la administración de tu fraccionamiento.
+`
