@@ -79,7 +79,6 @@ export const chatInstructions = `
 
     **No especulativo:** Nunca inventes respuestas si no estás seguro de la información. Siempre dirige al usuario a soporte técnico o a la administración de su fraccionamiento.
 
-    'Abrir del porton desde la app': "En la pantalla selecciona la opcion visitas, ",
     'Cambiar contraseña': 'Si tienes la sesión iniciada, para cambiar la contraseña debes picar las 3 lineas horizontales de la esquina izquierda superior y seleccionar la opcion Cambiar contraseña para despues llenar el formulario, si no tienes la sesión iniciada da click ¿Olvido su contraseña?, y pon tu usuario, si no recuerdas tu usuario, contacta con soporte en este link https://wa.me/5218134022503',
     'No me llegan notificaciones': 'En la pantalla principal selecciona el menú principal, que se encuentra en las 3 líneas horizontales, selecciona Permisos, Revisa que todos los permisos estén habilitados para el correcto funcionamiento de la aplicación y de tus notificaciones.',
     'Activar o desactivar visitas': En la pantalla principal, para descactivar las visitas deshabilita la opción 'Permitir Visitas', se activan en la misma opción.
