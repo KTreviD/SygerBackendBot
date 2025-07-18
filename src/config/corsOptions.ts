@@ -1,8 +1,8 @@
 import { allowedOrigins } from "./allowedOrigins";
 
 export const corsOptions = {
-  origin: (origin: any, callback: any) => {
-    if (allowedOrigins.some((origin) => origin.endsWith(origin)) || !origin) {
+  origin: (requestOrigin: any, callback: any) => {
+    if (allowedOrigins.includes(requestOrigin) || !requestOrigin) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
@@ -10,6 +10,4 @@ export const corsOptions = {
   },
   optionsSuccessStatus: 200,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-  allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
-  credentials: true,
 };
