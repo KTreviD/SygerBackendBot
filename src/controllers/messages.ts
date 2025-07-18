@@ -6,16 +6,12 @@ import { UselessMessage } from "../models/useless_message";
 
 export const getMessagesByUser = async (req: Request, res: Response) => {
   const { userId } = req.query;
-  console.log({ "AQUI:": req.query });
 
   try {
     const messages = await Message.findAll({
       where: { user_id: Number(userId) },
       order: [["created_at", "ASC"]],
     });
-
-    console.log("Me los pidieron");
-    messages.map((x) => console.log({ x }));
 
     res.json({ messages });
   } catch (error) {
@@ -63,7 +59,7 @@ const MESSAGE_TYPES_DICTIONARY = {
   "Usuario: Escoge 'No, no me fue útil'": {
     id: 10,
     botResponse: `Lamento que la respuesta no te haya sido útil.\n¿Podrías decirme más sobre lo que necesitas o en qué parte no fue clara?`,
-    botMessageTypeId: 1,
+    botMessageTypeId: 16,
   },
   "Usuario: Escoge 'Preguntar sobre otra sección'": {
     id: 11,
@@ -83,15 +79,15 @@ const getBotResponse = async (userMessage: string, messageTypeId: number, messag
   let botMessageTypeId = 0;
 
   if ((messageTypeId >= 2 && messageTypeId <= 7) || (messageTypeId >= 9 && messageTypeId <= 12) || messageTypeId === 14) {
-    console.log(messageTypeId);
     let finalMessageTypeId = messageTypeId;
+
     if (messageTypeId === 12) finalMessageTypeId = messages[messages.length - 4].message_type_id;
-    console.log({ finalMessageTypeId });
+
     const match = Object.values(MESSAGE_TYPES_DICTIONARY).find((entry) => entry.id === finalMessageTypeId);
+
     botResponse = match?.botResponse!;
     botMessageTypeId = match?.botMessageTypeId!;
   } else if (messageTypeId >= 46 && messageTypeId <= 51) {
-    console.log("Entre aqui");
     switch (messageTypeId) {
       case 46:
         chatInstructions += noticiasData;
@@ -135,10 +131,8 @@ const getBotResponse = async (userMessage: string, messageTypeId: number, messag
 };
 
 export const handleMessage = async (req: Request, res: Response) => {
-  console.log("EHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYy");
   const messages: Message[] = req.body.messages;
   const userMessage: MessageAttributes = req.body.userMessage;
-  console.log({ userMessage, messages });
 
   try {
     const { botResponse, botMessageTypeId } = await getBotResponse(userMessage.message, userMessage.message_type_id, messages);
@@ -157,7 +151,6 @@ export const handleMessage = async (req: Request, res: Response) => {
         created_at: new Date(),
       });
 
-    console.log({ messagesToCreate });
     messagesToCreate.push(
       {
         user_id: userMessage.user_id,
@@ -174,7 +167,7 @@ export const handleMessage = async (req: Request, res: Response) => {
         created_at: laterLaterDate,
       }
     );
-    console.log({ messagesToCreate });
+
     const actualMessages = await Message.bulkCreate(messagesToCreate, { individualHooks: true });
     const lastMessageId = actualMessages.find((message) => message.is_user == true)?.id;
 
@@ -188,12 +181,8 @@ export const handleMessage = async (req: Request, res: Response) => {
     }
 
     res.json({
-      botMessage: {
-        user_id: userMessage.user_id,
-        is_user: false,
-        message: botResponse,
-        message_type_id: botMessageTypeId,
-      },
+      userMessage: actualMessages.find((m) => m.is_user),
+      botMessage: actualMessages.find((m) => !m.is_user && (messages.length === 1 ? m.message_type_id !== 1 : true)),
     });
   } catch (error) {
     console.error(error);
