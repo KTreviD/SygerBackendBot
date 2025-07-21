@@ -1,10 +1,11 @@
 import { allowedOrigins } from "./allowedOrigins";
 
 export const corsOptions = {
-  origin: (requestOrigin: any, callback: any) => {
-    if (allowedOrigins.includes(requestOrigin) || !requestOrigin) {
+  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      console.error("❌ CORS blocked:", origin);
       callback(new Error("Not allowed by CORS"));
     }
   },
