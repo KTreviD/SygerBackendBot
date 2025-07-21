@@ -24,17 +24,6 @@ class Server {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.static("public"));
 
-    // Security headers middleware
-    this.app.use((req, res, next) => {
-      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-      res.setHeader("Content-Security-Policy", "default-src 'self'");
-      res.setHeader("X-Content-Type-Options", "nosniff");
-      res.setHeader("X-Frame-Options", "DENY");
-      res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-      res.setHeader("X-Permitted-Cross-Domain-Policies", "none");
-      next();
-    });
-
     // Protected Routes And Controllers
     this.routes();
   }
