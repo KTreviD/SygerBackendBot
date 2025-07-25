@@ -51,6 +51,11 @@ const MESSAGE_TYPES_DICTIONARY = {
     botResponse: "¡Claro que si!, que te gustaria saber sobre la sección de Mi cuenta?",
     botMessageTypeId: 43,
   },
+  "Usuario: Escoge hablar con Soporte técnico": {
+    id: 8,
+    botResponse: "Comunicate con soporte técnico en el siguiente WhatsApp: https://wa.me/5218134022503 o acude directamente la administración de tu fraccionamiento.\n¿En qué otra sección de la aplicación puedo ayudarte?",
+    botMessageTypeId: 1,
+  },
   "Usuario: Escoge 'Si, me fue útil'": {
     id: 9,
     botResponse: "¡Me alegra saber que te fue útil! ¿En qué otra sección de la aplicación puedo ayudarte?",
@@ -78,7 +83,7 @@ const getBotResponse = async (userMessage: string, messageTypeId: number, messag
   let botResponse = "";
   let botMessageTypeId = 0;
 
-  if ((messageTypeId >= 2 && messageTypeId <= 7) || (messageTypeId >= 9 && messageTypeId <= 12) || messageTypeId === 14) {
+  if ((messageTypeId >= 2 && messageTypeId <= 8) || (messageTypeId >= 9 && messageTypeId <= 12) || messageTypeId === 14) {
     let finalMessageTypeId = messageTypeId;
 
     if (messageTypeId === 12) finalMessageTypeId = messages[messages.length - 4].message_type_id;

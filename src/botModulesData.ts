@@ -23,7 +23,6 @@ export const noticiasData: string = `
 
 export const visitasData: string = `
     'Activar o desactivar visitas': En la pantalla principal, para descactivar las visitas deshabilita la opción 'Permitir Visitas', se activan en la misma opción.
-    'Activar o desactivar visitas': En la pantalla principal, para descactivar las visitas deshabilita la opción 'Permitir Visitas', se activan en la misma opción.
     
     Los tipos de visitas disponibles son: 'Regulares', 'Servicio a domicilio / Acceso único', 'Empleado Domestico', 'Eventos', 'Frecuentes' o 'Peatonal',
     Hay que sustituir <TIPO_VISITA> por el tipo de visita en la respuesta que le des al usuario, para cada tipo de prueba de los que te menciones tiene las siguientes 3 opciones:
